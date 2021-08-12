@@ -20,3 +20,7 @@ class ArticleSerializer(serializers.Serializer):
         instance.save()
         return instance
 
+    class Meta:
+        model = Article
+        fields = ('id', 'title', 'description', 'body', 'author_id')
+
